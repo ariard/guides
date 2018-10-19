@@ -131,6 +131,20 @@ Si votre ordinateur a suffisament de mémoire vive, augmenter la quantité dédi
 
 **Note** : la mémoire est exprimée en Mo. Ici, "6000" signifie donc 6000 Mo, soit _environ_ 6 Go. Ajustez évidemment selon votre cas.
 
+Pour synchroniser la chaine de blocs plus rapidement, vous pouvez augmenter le nombre de processeurs travaillant à la validation des scripts. Bien entendu, votre machine doit disposer du nombre de processeurs virtuels que vous indiquez, la commande `cat /proc/cpuinfo` vous renseignera sur Linux.
+
+`par=1`
+
+Pour économiser des ressources réseaux, n'hésitez pas à employer les configurations suivantes :
+
+`blocksonly=1`
+
+`maxuploadtarget=137`
+
+`maxconnections=16`
+
+N'hésitez à vous renseigner sur toutes les options existantes de Bitcoin Core en lançant la commande manuel `man bitcoind`.
+
 Sauvegardez et fermez le fichier de configuration, quittez Bitcoin Core avec `Fichier` / `Quitter`, et relancez le programme.
 
 Voilà, vous pouvez désormais laisser la blockchain se synchroniser toute seule pendant que nous allons configurer notre Thunder Badger.
